@@ -1,0 +1,16 @@
+.overlay {
+    position: absolute;
+   
+    opacity: 0;
+    
+    background-color: #c5dce4;
+  }
+
+  .text {
+    color: rgb(255, 255, 255);
+    
+  }
+
+  .container:hover .overlay {
+    opacity: 1;
+  }

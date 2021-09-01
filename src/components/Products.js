@@ -6,13 +6,32 @@ const Products = () => {
 
     const [data, setData] = useState([]);
 
+    const [orgProducts, setOrgProducts] = useState([]);
     useEffect(() => {
         axios.get("https://5d76bf96515d1a0014085cf9.mockapi.io/product")
-            .then(response => setData(response.data))
+            .then(({data}) => {
+                setOrgProducts(data)
+                setData(data)
+            })
 
     }, [])
 
-    
+    const [input, setInput] = useState('');
+
+    const changeHandler = (e) => {
+        setInput(e.target.value);
+    }
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        const updatedProducts = orgProducts.filter(({name}) => name.includes(input))
+        setData(updatedProducts)
+        // fetch(`https://5d76bf96515d1a0014085cf9.mockapi.io/product/${input}`)
+        //     .then(response => response.json())
+        //     .then(data => console.log(data))
+    }
+
+
 
 
 
@@ -20,28 +39,22 @@ const Products = () => {
     return (
         <div>
 
-            
-
-            
-            {data.length >=1 ? <Proditems  data={data} /> : null }
-            
-
-            {/* {
-                data.map(item => <div key={item.id}>
-                    {item.brand} <br />
-                    {item.name} <br />
-                    <img src={item.preview} alt="abcd" style={{ "width": "250px" }} /> <br /> <br />
-
-                </div>)
-            } */}
-
-
-            {/* <form  className="text-center" onSubmit={submitHandler}>
+            <form className="text-center" onSubmit={submitHandler}>
                 <h4>Search the Products</h4>
-                <input type="text" name="input" value={input} onChange={changeHandler}/>  
+                <input type="text" name="input" value={input} onChange={changeHandler} />
                 <input type="submit" className="btn btn-primary" name="submit" /> <br />
                 <p>search results are for your input: </p>{input}
-            </form> */}
+            </form>
+
+
+
+
+            {data.length >= 1 ? <Proditems data={data} /> : null}
+
+
+
+
+
         </div>
     );
 }

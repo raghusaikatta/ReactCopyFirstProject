@@ -1,76 +1,58 @@
-import React,{useState} from 'react';
+import React, {useState} from 'react';
+
+
 
 const Signup = () => {
 
-    const [data,setData] = useState({
-        username:"",
+    const[user,setUser] = useState({
+        firstName:"",
+        lastName:"",
+        age: null,
+        city:"",
         email:"",
-        password:"",
-        confirmpassword:"",
-        city:""
+        address:""
+    })
 
-    });
+    const {firstName,lastName,age,city,email,address}=user
 
-    const{username,email,password,confirmpassword,city} = data;
+    const handleChange =(event) => {
 
-    const changeHandler =(e) =>{
-        setData({...data,[e.target.name]:e.target.value})
-    }
-
-    const submitHandler= (e) =>{
-        e.preventDefault();
-        
-
-        if(password !== confirmpassword){
-            console.log("Incrrect password")
+        if(event.target.name=== "firstName"){
+            setUser({...user,[event.target.name]: event.target.value.toUpperCase()});
+            
         }else{
-            console.log (data);
-            alert(`${username} : signed up successfully`)
+            setUser({...user,[event.target.name]: event.target.value});
         }
+
+        
+    }
+
+    const submitHandler=(e) =>{
+        alert(`firstName = ${firstName} and email ${email} `)
     }
 
 
-    return (
-        <div>
+    return ( <div>
+        <h1>Signup</h1>
 
-            <h3> Sign up into Blessing Application</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores quam voluptatum consectetur deleniti! Ea enim, amet illum quae eveniet quos sit atque facilis tenetur voluptate laudantium eius sint cumque beatae!</p>
-            <br />
-            <p><strong>Please fill below details: </strong></p>
+        <form onSubmit={submitHandler}>
+            <label >First Name:</label>
+            <input type="text" name="firstName" value={firstName} onChange={handleChange} /> <br />
+            <label >Last Name:</label>
+            <input type="text" name="lastName" value={lastName} onChange={handleChange} /> <br />
+            <label >age:</label>
+            <input type="text" name="age" value={age} onChange={handleChange} /> <br />
+            <label >city:</label>
+            <input type="text" name="city" value={city} onChange={handleChange} /> <br />
+            <label >email:</label>
+            <input type="email" name="email" value={email} onChange={handleChange} /> <br />
+            <label >address:</label>
+            <input type="text" name="address" value={address} onChange={handleChange} /> <br />
 
-            <form onSubmit={submitHandler} >
-                <div >
-                    <div className="form-group col-md-6">
-                        <label >Username</label>
-                        <input type="text" className="form-control" required name="username" value={username} onChange={changeHandler}/>
-                    </div>
-                    <div className="form-group col-md-6">
-                        <label >Email</label>
-                        <input type="email" className="form-control"   name="email" value={email} onChange={changeHandler} />
-                    </div>
-                    <div className="form-group col-md-6">
-                        <label >Password</label>
-                        <input type="password" className="form-control"  name="password" value={password} onChange={changeHandler}/>
-                    </div>
-                    <div className="form-group col-md-6">
-                        <label >Conform Password</label>
-                        <input type="password" className="form-control" name="confirmpassword" value={confirmpassword} onChange={changeHandler} />
-                        
-                    </div>
-                    {password !==confirmpassword ? <p style={{"color":"red"}}> Password not matching </p> : <p  style={{"color":"green"}}>Password matched</p>}
-                    <div className="form-group col-md-6">
-                        <label >City</label>
-                        <input type="text" className="form-control" name="city" value={city} onChange={changeHandler} />
-                    </div>
-                </div>
+            <input type="submit" name="submit" />
 
-                <br />
-
-                <button type="submit" className="btn btn-primary">Sign in</button> 
-                
-            </form>
-        </div>
-    );
+        </form>
+    </div> );
 }
-
+ 
 export default Signup;
