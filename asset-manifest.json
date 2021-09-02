@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/ReactFirstProject/static/css/main.e1c2e2c7.chunk.css",
-    "main.js": "/ReactFirstProject/static/js/main.ef8d53da.chunk.js",
-    "main.js.map": "/ReactFirstProject/static/js/main.ef8d53da.chunk.js.map",
-    "runtime-main.js": "/ReactFirstProject/static/js/runtime-main.d305a465.js",
-    "runtime-main.js.map": "/ReactFirstProject/static/js/runtime-main.d305a465.js.map",
-    "static/js/2.3b59a16a.chunk.js": "/ReactFirstProject/static/js/2.3b59a16a.chunk.js",
-    "static/js/2.3b59a16a.chunk.js.map": "/ReactFirstProject/static/js/2.3b59a16a.chunk.js.map",
-    "static/js/3.76f1e21f.chunk.js": "/ReactFirstProject/static/js/3.76f1e21f.chunk.js",
-    "static/js/3.76f1e21f.chunk.js.map": "/ReactFirstProject/static/js/3.76f1e21f.chunk.js.map",
-    "index.html": "/ReactFirstProject/index.html",
-    "static/css/main.e1c2e2c7.chunk.css.map": "/ReactFirstProject/static/css/main.e1c2e2c7.chunk.css.map",
-    "static/js/2.3b59a16a.chunk.js.LICENSE.txt": "/ReactFirstProject/static/js/2.3b59a16a.chunk.js.LICENSE.txt"
+    "main.css": "/ReactCopyFirstProject/static/css/main.e2eca8bf.chunk.css",
+    "main.js": "/ReactCopyFirstProject/static/js/main.3c2d3fa6.chunk.js",
+    "main.js.map": "/ReactCopyFirstProject/static/js/main.3c2d3fa6.chunk.js.map",
+    "runtime-main.js": "/ReactCopyFirstProject/static/js/runtime-main.4d809405.js",
+    "runtime-main.js.map": "/ReactCopyFirstProject/static/js/runtime-main.4d809405.js.map",
+    "static/js/2.5d1be8c5.chunk.js": "/ReactCopyFirstProject/static/js/2.5d1be8c5.chunk.js",
+    "static/js/2.5d1be8c5.chunk.js.map": "/ReactCopyFirstProject/static/js/2.5d1be8c5.chunk.js.map",
+    "static/js/3.7149dcc3.chunk.js": "/ReactCopyFirstProject/static/js/3.7149dcc3.chunk.js",
+    "static/js/3.7149dcc3.chunk.js.map": "/ReactCopyFirstProject/static/js/3.7149dcc3.chunk.js.map",
+    "index.html": "/ReactCopyFirstProject/index.html",
+    "static/css/main.e2eca8bf.chunk.css.map": "/ReactCopyFirstProject/static/css/main.e2eca8bf.chunk.css.map",
+    "static/js/2.5d1be8c5.chunk.js.LICENSE.txt": "/ReactCopyFirstProject/static/js/2.5d1be8c5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d305a465.js",
-    "static/js/2.3b59a16a.chunk.js",
-    "static/css/main.e1c2e2c7.chunk.css",
-    "static/js/main.ef8d53da.chunk.js"
+    "static/js/runtime-main.4d809405.js",
+    "static/js/2.5d1be8c5.chunk.js",
+    "static/css/main.e2eca8bf.chunk.css",
+    "static/js/main.3c2d3fa6.chunk.js"
   ]
 }
